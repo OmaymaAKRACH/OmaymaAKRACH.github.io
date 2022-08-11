@@ -1,0 +1,520 @@
+@import 
+url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+
+}
+/*body*/
+body{
+    background-color: #001F4E;
+}
+
+/*header and nav area*/
+.headerNav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001F4E;
+    padding-left: 25px;
+    padding-right: 25px;
+    top: 0;
+    position:fixed;
+    z-index: 999;
+    width: 100%; 
+}
+
+header{
+    padding: 5px 0 0 10px;
+}
+header .logo img{
+    width: 100%;
+    max-width: 50px;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    max-width: 50vw;
+    justify-content:space-evenly;
+    letter-spacing: .2em;
+    background-color: #001F4E;
+    
+    
+}
+
+nav ul.show{
+    display: flex;
+    right: 0;
+    top:42.9px;
+    position: fixed;
+    min-height: 100vh;
+    width:100%;
+    flex-direction: column;
+    padding: min(30vh,10rem) 2em;
+    background-color: #001F4E;
+   
+   
+}
+nav ul li{
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5em;
+    
+    
+}
+
+
+nav ul li a{
+    color: #fbebdf;
+   
+    
+}
+
+
+a{
+    color: #fbebdf;
+}
+
+/*style commun between sections*/
+section{
+    min-height: 100vh;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-top: 50px;
+    background-color: #fbebdf;
+}
+
+/*welcome section*/
+.section-bonjour{
+
+    background-color: #fbebdf;
+    min-height:100vh ;
+
+    align-items: center;
+    color:#001F4E;
+    padding: 50px;
+    font-weight: 40%;
+
+
+}
+.section-bonjour span{
+    background-image: linear-gradient(90deg,#001F4E,#ab3dc9,#6280ad);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.section-bonjour h2{
+    color: #001F4E;
+    text-align: center;
+}
+
+.section-bonjour .main-image{
+    display: flex;
+    justify-content: center;
+
+}
+.main-image img{
+    float: right;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/*commun style between buttons*/
+.section-bonjour .main-btn, .contact-form .button-area{
+    color: #fbebdf ;
+    background: #001F4E;
+    background: linear-gradient(41deg, rgba(25,21,106,1) 0%, #6280ad 35%, #ab3dc9 100%);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.5em 1em 1em .5em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+
+}
+
+
+.section-bonjour .main-btn:hover{
+    transform: scale(1.1);
+
+}
+.social-icons{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.icon{
+    color: #001F4E;
+    font-size: 1.7em;
+    padding-right: 1em;
+}
+
+/*about section*/
+#about{
+    height: 100vh;
+    background:url(../images/pngtree-pink-playful-abstract-portfolio-memphis-image_593407.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px;
+}
+.about-info{
+    margin-top: 15px;
+    width: 400px;
+}
+#about h2{
+    font-size: 40px;
+}
+#about p{
+    font-size: 25px;
+    text-align:start;
+
+}
+.about-img {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.about-img img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 150px;
+    
+}
+
+/*projects section*/
+#projects{
+    background-color: #6280ad;
+    max-width: 100vw;
+}
+#projects .content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+.projects-img{
+    display: flex;
+    align-items: center;
+}
+.projects-img img{
+    max-width: 100%;
+    
+}
+
+/*sections titles style*/
+.title{
+    display: flex;
+    justify-content: center;
+    color: #001F4E;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+
+}
+.card{
+    background-color:white;
+    width: 21.25em;
+    box-shadow:0 5px 25px rgba(1 1 1/ 25%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 1.5em;
+}
+.card:hover , .about-info:hover, .about-img:hover,.skill:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+.card p{
+    margin-bottom: 25px;
+}
+.card .subtext{
+    height: fit-content;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #001F4E;
+    border-radius: 150px;
+    align-items: center;
+}
+.subtext a{
+    color: #fbebdf;
+    font-weight: bold; 
+}
+.subtext .icon{
+   
+    margin: 5px;
+    color: #fbebdf;
+}
+
+/*skills section*/
+.skills-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background:url(../images/pngtree-abstract-memphis-playful-portfolio-pink-image_593418.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.skill{
+    background-color:#001F4E;
+    width: 7em;
+    box-shadow:0 5px 25px rgba(1 1 1/ 25%);
+    border-radius: 100px;
+    padding: 25px;
+    margin: 1.5em;
+}
+.set-title{
+    display: flex;
+    color:#001F4E;
+    font-size: 1em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 0 5% 0 5%;
+
+}
+.set{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+.skill-img {
+    display: flex;
+    align-items: center;
+}
+.skill-img img{
+    max-width: 100%;
+}
+.skill h6{
+    text-align: center;
+    color: #fbebdf;
+    padding: 5%;
+}
+
+/*contact section*/
+.contact{
+    background-color: #6280ad;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+.contact-content{
+    display: grid;
+    grid-template-columns: 45% auto;
+    grid-template-rows: 4fr 5fr;
+    grid-template-areas: 
+    "info form"
+    "map form";
+    padding: 0 5% 5% 5%;
+ 
+    
+}
+.column{
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    
+}
+
+
+.right{
+    grid-area: form;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #fbebdf;
+    margin-left: 2%;
+    align-content: flex-start;
+    height:fit-content;
+
+    
+  
+}
+.contact-form{
+    width: 100%;
+    min-height: 100%;
+    align-content: center;
+}
+form{
+    min-height: 100%;
+}
+.field{
+    margin-bottom: 2%;
+}
+input[type=text],input[type=email],textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.right .text, .contact-info, .contact-info .row{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    width: 100%;
+    height: fit-content;
+}
+.right .text{
+    font-weight: 500;
+    font-size:medium;
+    color: #001F4E;
+    margin-bottom: 2%;
+}
+.form-label{
+    display: none;
+}
+.button-area{
+    width: 100%;
+    background-color: #001F4E;
+}
+.button-area button{
+    width: 100%;
+    background-color: transparent;
+    align-content: center;
+    border: none;
+    color: #fbebdf;
+    font-size: normal;
+    font-weight:800;
+    cursor: pointer;
+}
+.left{
+    grid-area: info;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #001F4E;
+    color: #fbebdf;
+    max-width: 600px;
+}
+.left p{
+    width: 70%;
+}
+
+
+.gmap_canvas{
+    grid-area: map;
+
+}
+.hamburger-menu{
+    display: none;
+}
+/*footer style*/
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    padding: 1em;
+}
+
+/*media query*/
+@media (min-width: 700px) {
+    .section-bonjour{
+        display: grid;
+        grid-template-areas: "content img";
+        grid-template-columns: 50%;
+        align-items: center;        
+    }
+    .section-bonjour .content{
+        grid-area: content;
+       display: block;
+       justify-content: space-around;
+        
+    }
+    .section-bonjour h2{
+        font-weight: bold;
+        font-size: 3rem;        
+    }
+    .section-bonjour .main-image{
+        grid-area: img;
+        
+    }
+
+    .section-bonjour h3{
+        font-size: 2em;
+        font-weight: 400;
+    }
+    .card{
+        position: relative;
+    }
+    .card p{
+        margin-bottom: 50px;
+    }
+    .subtext{
+        padding-right: 25px;
+        position:absolute;
+        margin-top: 100px;
+        bottom:0;
+        margin-bottom:25px ;
+    }
+    
+}
+@media (max-width:700px){
+    nav ul{
+        display: none;
+    }
+ 
+   
+    .section-bonjour{
+        display: grid;
+        grid-template-areas: 
+        "img"
+        "main";
+        grid-template-rows: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-bonjour .content{
+        grid-area: main;
+        align-items: center;
+    }
+    .section-bonjour .main-image{
+        grid-area: img;
+    }
+    .about-img{
+        margin-right:25%;
+    }
+    #about{
+        height: fit-content;
+    }
+    .contact-content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 5% 5% 5%;
+     }
+     .right{
+        margin-left: 0;
+     }
+     .hamburger-menu{
+        display: block;
+        border: 0;
+        background-color: transparent;
+        color: white;
+        font-size: 20px;
+    }
+
+}
